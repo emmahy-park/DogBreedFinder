@@ -1,3 +1,10 @@
+# TechMockInterview Homework Assignment: Using the Dog API in a Nuxt.js Application
+
+This application allows users to view a random dog image when the page loads.
+It also enables users to fetch a new random dog image by clicking a button.
+Additionally, users can select a breed from a dropdown menu, and upon selection, a random image of the chosed breed will be displayed.
+The application is built using Nuxt.js and Bootstrap.
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
