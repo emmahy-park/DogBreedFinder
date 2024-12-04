@@ -1,31 +1,33 @@
 <script setup> 
+    // Declare variables
     const dogImageURL = ref('');
     const dogBreedList = ref([]);
     const dogBreed = ref('');
 
-
+    // Function to fetch a random dog image based on the breed, if selected by the user
     const fetchDogImage = async (breed = '') => {
         try {
             const url = breed ? `https://dog.ceo/api/breed/${breed}/images/random` : 'https://dog.ceo/api/breeds/image/random';
             const response = await $fetch(url);
-            dogImageURL.value = response.message;
-            dogBreed.value = displayedBreed(dogImageURL);
+            dogImageURL.value = response.message; // Store the image URL
+            dogBreed.value = displayedBreed(dogImageURL); // Store the breed name
         } catch (error) {
             console.log('Error fetching dog images: ', error);
         }
     };
 
-    fetchDogImage();
-
+    // Function to extract the breed name from the image URL
     function displayedBreed(dogImageURL) {
         let breed = dogImageURL.value.split('/');
         return breed[4].toUpperCase();
     }
-    
+
+    // Function to fetch a new random dog image when button is clicked
     const clicked = async () => {
         await fetchDogImage();
     };
 
+    // Function to fetch the list of all dog breeds
     const fetchDogBreed = async () => {
         try {
             const response = await $fetch('https://dog.ceo/api/breeds/list/all');
@@ -40,11 +42,15 @@
             console.log('Error fetching dog breed list: ', error);
         }
     };
-    fetchDogBreed();
-
+    
+    // Function to fetch a random dog image for a selected breed
     const clickedBreed = async (breed) => {
         await fetchDogImage(breed);
     }
+
+    // Call functions
+    fetchDogImage();
+    fetchDogBreed();
 
 
 </script>

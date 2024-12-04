@@ -1,7 +1,5 @@
 <template>
   <b-div background-color="body-tertiary">
-
-  
     <Navbar class="navbar" background-color="body-secondary">
       <Container type="fluid">
         <NavbarBrand>
