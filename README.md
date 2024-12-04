@@ -5,6 +5,11 @@ It also enables users to fetch a new random dog image by clicking a button.
 Additionally, users can select a breed from a dropdown menu, and upon selection, a random image of the chosed breed will be displayed.
 The application is built using Nuxt.js and Bootstrap.
 
+
+https://github.com/user-attachments/assets/a953bca7-9a23-4e1b-a658-e3a19c5d3593
+
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
